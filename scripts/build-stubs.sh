@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
 (
-    # Current dir should be the root of the repo
-    cd $(dirname $0)/..
+    set -e
 
-    git clone --depth 1 --branch main https://github.com/adafruit/circuitpython.git
+    # Current dir should be the root of the repo
+    cd "$(dirname $0)/.."
+
+    git clone --depth 1 --branch 9.0.5 https://github.com/adafruit/circuitpython.git
 
     cd circuitpython
-    git checkout 9.0.5
 
     # use the make commands instead of the git commands
     make fetch-all-submodules
