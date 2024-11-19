@@ -6,9 +6,10 @@
     # Current dir should be the root of the repo
     cd "$(dirname $0)/.."
 
-    git clone --depth 1 --branch 9.0.5 https://github.com/adafruit/circuitpython.git
+    git clone -c core.longpaths true --depth 1 --branch 9.0.5 https://github.com/adafruit/circuitpython.git
 
     cd circuitpython
+    git config core.longpaths true
 
     # use the make commands instead of the git commands
     make fetch-all-submodules
