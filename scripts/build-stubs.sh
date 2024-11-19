@@ -17,6 +17,7 @@
     # Use a venv for these
     # Using this name so circuitpython repo already gitignores it
     python3 -m venv .venv/
+    tree .venv
     . .venv/bin/activate
 
     # `make stubs` in circuitpython
