@@ -6,7 +6,7 @@
     # Current dir should be the root of the repo
     cd "$(dirname $0)/.."
 
-    git clone -c core.longpaths true --depth 1 --branch 9.0.5 https://github.com/adafruit/circuitpython.git
+    git -c core.longpaths=true clone --depth 1 --branch 9.0.5 https://github.com/adafruit/circuitpython.git
 
     cd circuitpython
     git config core.longpaths true
