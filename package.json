@@ -2,16 +2,16 @@
   "name": "vscode-circuitpython",
   "displayName": "CircuitPython",
   "description": "CircuitPython for Visual Studio Code",
-  "version": "0.2.0",
-  "publisher": "joedevivo",
+  "version": "0.3.0",
+  "publisher": "trolleyman",
   "license": "MIT",
-  "qna": "https://github.com/joedevivo/vscode-circuitpython/discussions",
+  "qna": "https://github.com/trolleyman/vscode-circuitpython/discussions",
   "repository": {
     "type": "git",
-    "url": "https://github.com/joedevivo/vscode-circuitpython.git"
+    "url": "https://github.com/trolleyman/vscode-circuitpython.git"
   },
   "bugs": {
-    "url": "https://github.com/joedevivo/vscode-circuitpython/issues"
+    "url": "https://github.com/trolleyman/vscode-circuitpython/issues"
   },
   "engines": {
     "vscode": "^1.85.0"
@@ -32,10 +32,7 @@
     "workspaceContains:/code.txt",
     "workspaceContains:/main.py",
     "workspaceContains:/main.txt",
-    "workspaceContains:/boot_out.txt",
-    "onCommand:circuitpython.openSerialMonitor",
-    "onCommand:circuitpython.selectSerialPort",
-    "onCommand:circuitpython.closeSerialMonitor"
+    "workspaceContains:/boot_out.txt"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -112,7 +109,7 @@
             "null"
           ],
           "default": null,
-          "description": "Circuit Python version for the current board. Intended to be set at the workspace level.",
+          "description": "CircuitPython version for the current board. Intended to be set at the workspace level.",
           "scope": "window"
         }
       }

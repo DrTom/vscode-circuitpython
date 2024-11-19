@@ -1,4 +1,6 @@
-# vscode-circuitpython README
+# `vscode-circuitpython`
+
+**Forked from https://github.com/joedevivo/vscode-circuitpython**
 
 This extension aspires to bring your entire CircuitPython workflow into a single
 place in VSCode.
@@ -41,19 +43,19 @@ bundles automatically.
 You can use it with the following commands:
 
 * `CircuitPython: Show Available Libraries`
-  This is every library in the Adafruit Bundle. Alphabetical, but 
-  installed libraries are grouped on top. Click an out of date library 
+  This is every library in the Adafruit Bundle. Alphabetical, but
+  installed libraries are grouped on top. Click an out of date library
   to update, click an uninstalled library to install it.
 * `CircuitPython: List Project Libraries`
-  Lists what's in your project's lib. If anything is out of date, click 
+  Lists what's in your project's lib. If anything is out of date, click
   it to update.
-* `CircuitPython: Reload Project Libraries` 
-  In case it's reporting incorrectly. This can happen if you modify the 
+* `CircuitPython: Reload Project Libraries`
+  In case it's reporting incorrectly. This can happen if you modify the
   filesystem outside of vscode.
 * `CircuitPython: Update All Libraries`
   Equivalent of `circup update --all`
 * `CircuitPython: Check for latest bundle`
-  Compares the bundle on disk to the latest github release, downloads the 
+  Compares the bundle on disk to the latest github release, downloads the
   release if it's newer.
 
 ### Serial Console
@@ -106,7 +108,7 @@ of running on a specific board.
 
 You can also set these at a user level, although that's not the primary intent.
 If you do this, it will get overridden at the workspace level if you ever touch
-the choose board dropdown or open a serial monitor. 
+the choose board dropdown or open a serial monitor.
 
 I'd probably have restricted the scope to workspace if that was an option.
 
