@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
-
 (
-    set -e
+    set -euo pipefail
+    # set -x
 
-    # Current dir should be the root of the repo
-    cd "$(dirname $0)/.."
+    VS_CODE_CIRCUITPYTHON_DIR="$(cd -- "$(dirname "${BASH_SOURCE}")" ; cd .. > /dev/null 2>&1 && pwd -P)"
+    cd $VS_CODE_CIRCUITPYTHON_DIR
+    
+    # clean up 
+    rm -rf stubs
+    rm -rf circuitpython
+
 
     git config --global core.longpaths true
     git clone --depth 1 --branch 9.2.1 https://github.com/adafruit/circuitpython.git
@@ -25,14 +30,10 @@
     pip3 install wheel  # required on debian buster for some reason
     pip3 install -r requirements-doc.txt
     make stubs
-    if [ -d ../stubs ]; then
-        mv circuitpython-stubs/* ../stubs/
-    else
-        # if stubs already exists, this would get interpreted as "move circuitpython-stubs *into* stubs"
-        # hence the "if".  Friendlier than the alternative, `rm -rf stubs`
-        mv circuitpython-stubs/ ../stubs
-    fi
-    cd ..
+
+    mv circuitpython-stubs/ ../stubs
+
+    cd $VS_CODE_CIRCUITPYTHON_DIR
 
     # scripts/build_stubs.py in this repo for board stubs
     python3 ./scripts/build_stubs.py
