@@ -7,7 +7,7 @@
     cd "$(dirname $0)/.."
 
     git config --global core.longpaths true
-    git clone --depth 1 --branch 9.0.5 https://github.com/adafruit/circuitpython.git
+    git clone --depth 1 --branch 9.2.1 https://github.com/adafruit/circuitpython.git
 
     cd circuitpython
 

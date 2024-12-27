@@ -2,16 +2,16 @@
   "name": "vscode-circuitpython",
   "displayName": "CircuitPython",
   "description": "CircuitPython for Visual Studio Code",
-  "version": "0.3.0",
-  "publisher": "trolleyman",
+  "version": "0.3.0+9.2.1",
+  "publisher": "DrTom",
   "license": "MIT",
-  "qna": "https://github.com/trolleyman/vscode-circuitpython/discussions",
+  "qna": "https://github.com/DrTom/vscode-circuitpython/discussions",
   "repository": {
     "type": "git",
-    "url": "https://github.com/trolleyman/vscode-circuitpython.git"
+    "url": "https://github.com/DrTom/vscode-circuitpython.git"
   },
   "bugs": {
-    "url": "https://github.com/trolleyman/vscode-circuitpython/issues"
+    "url": "https://github.com/DrTom/vscode-circuitpython/issues"
   },
   "engines": {
     "vscode": "^1.85.0"
